@@ -47,3 +47,15 @@
 
 2. This package will generate a shared library "libshared_memory.so", which can be used in other packages.
 ```
+
+## robot_gazebo_plugin
+```
+1. This package realized a robot gazebo control plugin, which can communicate with shared memory.
+    The plugin is named "librobot_gazebo_plugin.so".
+
+2. To use the plugin, add following environment variable to your ~/.bashrc.
+    echo "export GAZEBO_PLUGIN_PATH=$GAZEBO_PLUGIN_PATH:~/robot-simulation-v1.1/install/robot_gazebo_plugin/lib" >> ~/.bashrc
+
+3. Add following line to "robot_gazebo_env/world/panda.world" within panda model.
+    <plugin name="robot_gazebo_control_plugin" filename="librobot_gazebo_plugin.so" />
+```
