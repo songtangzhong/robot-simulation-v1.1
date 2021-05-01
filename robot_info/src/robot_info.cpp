@@ -5,7 +5,7 @@ namespace robot_info
 RobotInfo::RobotInfo()
 {
     // Robot arm degree of freedom.
-    arm_dof_ = 7;
+    arm_dof_ = ARM_DOF;
 
     // Robot arm joint names.
     arm_joint_names_.resize(arm_dof_);
@@ -44,7 +44,7 @@ RobotInfo::RobotInfo()
 
 #if END_EFFECTOR_TRUE
     // End-effector degree of freedom.
-    end_eff_dof_ = 7;
+    end_eff_dof_ = END_EFF_DOF;
 
     // End-effector joint names.
     end_eff_joint_names_.resize(end_eff_dof_);
