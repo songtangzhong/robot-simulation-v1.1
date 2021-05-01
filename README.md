@@ -37,3 +37,13 @@
     A shared library "librobot_info.so" is generated, and will be used as a basic
     common library in other packages.
 ```
+
+## shared_memory
+```
+1. This package defines some shared memory operations, which can realize communication
+    with different process.
+    Usually, it is a bridge between ros2 controller manager and real robot.
+    In this simulation project, it is a bridge between ros2 controller manager and robot in gazebo.
+
+2. This package will generate a shared library "libshared_memory.so", which can be used in other packages.
+```
