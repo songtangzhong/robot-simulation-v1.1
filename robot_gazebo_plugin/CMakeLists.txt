@@ -60,6 +60,24 @@ ament_target_dependencies(test_gazebo_plugin_write
   shared_memory
 )
 
+add_executable(test_gazebo_plugin_read
+  test/test_gazebo_plugin_read.cpp
+)
+target_include_directories(test_gazebo_plugin_read 
+  PRIVATE 
+  ${robot_info_INCLUDE_DIRS}
+  ${shared_memory_INCLUDE_DIRS}
+)
+target_link_libraries(test_gazebo_plugin_read
+  ${robot_info_LIBRARIES}
+  ${shared_memory_LIBRARIES}
+)
+ament_target_dependencies(test_gazebo_plugin_read 
+  rclcpp
+  robot_info
+  shared_memory
+)
+
 install(DIRECTORY include/
   DESTINATION include
 )
@@ -72,6 +90,7 @@ install(TARGETS ${PROJECT_NAME}
 
 install(TARGETS 
   test_gazebo_plugin_write
+  test_gazebo_plugin_read
   RUNTIME DESTINATION lib/${PROJECT_NAME}
 )
 
