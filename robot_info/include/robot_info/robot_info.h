@@ -6,8 +6,7 @@
 #include <vector>
 
 // Define the condition macro to select if the end_effector is used.
-#define END_EFFECTOR_TRUE  1  // use
-//#define END_EFFECTOR_TRUE  0  // not use
+#define END_EFFECTOR_TRUE  1  // 1(use)  0(not use)
 
 // Define the macro of robot arm dof.
 #define ARM_DOF 7
