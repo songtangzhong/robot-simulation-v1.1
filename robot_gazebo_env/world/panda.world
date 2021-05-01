@@ -12,8 +12,8 @@
     <include>
       <!--<pose>0 0 0.4 0 0 0</pose>-->
       <uri>model://panda</uri>
-      <!--Gazebo plugin, which will used to communicate with shared memory.-->
-      <!--<plugin name="gazebo_control_plugin" filename="libgazebo_plugin.so" />-->
+      <!--Robot gazebo control plugin, which will used to communicate with shared memory.-->
+      <plugin name="robot_gazebo_control_plugin" filename="librobot_gazebo_plugin.so" />
     </include>
 
     <physics type="ode">
