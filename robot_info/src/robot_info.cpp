@@ -37,9 +37,9 @@ RobotInfo::RobotInfo()
     cur_arm_joint_positions_[3] = cmd_arm_joint_positions_[3] =  -1.5;
     cur_arm_joint_positions_[3] = cmd_arm_joint_positions_[5] = 1.88;
 
-    // key value of shared memory 
+    // Key value of shared memory to robot arm.
     arm_shm_key_ = 1234;
-    // key value of semaphore
+    // Key value of semaphore to robot arm shared memory.
     arm_sem_key_ = 1235;
 
 #if END_EFFECTOR_TRUE
@@ -73,10 +73,10 @@ RobotInfo::RobotInfo()
         end_eff_control_modes_[j] = position_mode_; // default: position mode
     }
     
-    // key value of shared memory 
-    arm_shm_key_ = 12345;
-    // key value of semaphore
-    arm_sem_key_ = 12346;
+    // Key value of shared memory to end-effector.
+    end_eff_shm_key_ = 12345;
+    // Key value of semaphore to end-effector shared memory.
+    end_eff_sem_key_ = 12346;
 #endif
 }
 
