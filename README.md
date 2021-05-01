@@ -14,12 +14,12 @@
     ros2 launch robot_description test_panda_description.launch.py
 
 5. (Note) urdf/panda_hw_interface.xacro
-    It does not be used in this package, but will be used in other packages.
+    It does not work in this package, but will work in other packages.
 ```
 
 ## robot_gazebo_env
 ```
-1. This is not a ros2 package, it is a gazebo model package.
+1. This is not a ros2 package, but a gazebo model package.
 
 2. panda/panda.sdf
     It is copied from "robot_description/urdf", and then be modified a little.
@@ -31,3 +31,9 @@
     gazebo ~/robot-simulation-v1.1/src/robot_gazebo_env/world/panda.world
 ```
 
+## robot_info
+```
+1. This package defines the basic information of a robot. 
+    A shared library "librobot_info.so" is generated, and will be used as a basic
+    common library in other packages.
+```
