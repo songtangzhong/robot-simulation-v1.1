@@ -89,6 +89,7 @@ int main(int argc, char ** argv)
         }
         sem::semaphore_v(arm_sem_id);
 
+#if END_EFFECTOR_TRUE
         sem::semaphore_p(end_eff_sem_id);
         for (unsigned int j=0; j< robot->end_eff_dof_; j++)
         { 
@@ -97,6 +98,7 @@ int main(int argc, char ** argv)
             std::cout << "cur_end_eff_joint_efforts_[" << j << "]: " << end_eff_shm_ptr->cur_end_eff_joint_efforts_[j] << std::endl;
         }
         sem::semaphore_v(end_eff_sem_id);
+#endif
         loop_rate.sleep();
     }
 
