@@ -16,6 +16,8 @@
         </xacro:include>
     </xacro:if>
 
-    <xacro:include filename="$(find robot_description)/urdf/panda_hw_interface.xacro" />
+    <xacro:include filename="$(find robot_description)/urdf/panda_hw_interface.xacro">
+        <xacro:arg name="end_effector" value="$(arg end_effector)" />
+    </xacro:include>
 
 </robot>
