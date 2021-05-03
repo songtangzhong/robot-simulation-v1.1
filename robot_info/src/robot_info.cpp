@@ -42,6 +42,9 @@ RobotInfo::RobotInfo()
     // Key value of semaphore to robot arm shared memory.
     arm_sem_key_ = 1235;
 
+    arm_state_shm_key_ = 1236;
+    arm_state_sem_key_ = 1237;
+
 #if END_EFFECTOR_TRUE
     // End-effector degree of freedom.
     end_eff_dof_ = END_EFF_DOF;

@@ -74,6 +74,9 @@ public:
     // Key value of semaphore to robot arm shared memory.
     key_t arm_sem_key_;
 
+    key_t arm_state_shm_key_;
+    key_t arm_state_sem_key_;
+
 #if END_EFFECTOR_TRUE
     // Key value of shared memory to end-effector.
     key_t end_eff_shm_key_;
