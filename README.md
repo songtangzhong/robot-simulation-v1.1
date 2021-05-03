@@ -59,3 +59,8 @@
 3. Add following line to "robot_gazebo_env/world/panda.world" within panda model.
     <plugin name="robot_gazebo_control_plugin" filename="librobot_gazebo_plugin.so" />
 ```
+
+## robot_hw_interface
+```
+1. This package realized the robot hardware interface, which can communicate with shared memory.
+```
